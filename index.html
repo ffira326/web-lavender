@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <base target="_top">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="animation-container"></div>
+
+  <header>
+    <div class="logo-container" onclick="scrollToId('home')">
+      <svg width="30" height="40" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 250V100M100 100C120 80 140 40 100 0C60 40 80 80 100 100Z" stroke="#311B92" stroke-width="20" stroke-linecap="round"/>
+        <circle cx="80" cy="150" r="15" fill="#7E57C2"/><circle cx="120" cy="130" r="15" fill="#7E57C2"/><circle cx="80" cy="110" r="15" fill="#9575CD"/>
+      </svg>
+      <span class="logo-text">LAVENDELLE</span>
+    </div>
+    <div class="burger" onclick="toggleNav()"><i class="fas fa-bars"></i></div>
+  </header>
+
+  <nav id="navbar">
+    <div class="nav-close" onclick="toggleNav()">&times;</div>
+    <ul>
+      <li><a href="javascript:void(0)" onclick="scrollToId('home')">Home</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToId('about')">About Us</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToId('catalog')">Collection Catalog</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToId('thisweek')">This Week Selection</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToId('pricelist')">Pricelist Bouquet</a></li>
+      <li><a href="javascript:void(0)" onclick="scrollToId('order')">Order Now</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero" style="padding-top: 0;">
+    <h1>Lavendelle</h1>
+    <p>Setiap bunga menyimpan cerita yang abadi.</p>
+    <button onclick="scrollToId('order')" style="padding: 12px 30px; background: white; color: var(--deep-purple); border: none; border-radius: 25px; font-weight: bold; cursor: pointer;">Order Now</button>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">Filosofi Lavendelle</h2>
+    <div class="about-content">
+      <p>Bagi kami,Lavender bukan sekadar bunga, melainkan simbol kedamaian dan keanggunan yang abadi. 
+        Kecintaan kami pada aroma Lavender yang menenangkan menjadi fondasi berdirinya Lavendelle.
+        Kami percaya bahwa setiap kelopak bunga yang mekar memiliki kemampuan untuk menyembuhkan perasaan dan mempercantik setiap momen.</p>
+      <p style="margin-top: 20px;">Meskipun Lavender adalah jantung dari toko ini,Lavendelle adalah rumah bagi seluruh keindahan flora.
+        Kami menyediakan berbagai jenis bunga mulai dari Mawar yang melambangkan gairah, Lily yang anggun, hingga Tulip yang ceria. Apapun ceritanya, kami memiliki bunga yang tepat untuk menemaninya.</p>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <h2 class="section-title">Our Catalog</h2>
+    <div class="grid">
+      <div class="card"><img src="/lavender.jpeg"><div class="card-body"><h3>Signature Lavender Bunch</h3><p class="price">Rp 120.000</p></div></div>
+      <div class="card"><img src="/red_roses.jpeg"><div class="card-body"><h3>Premium Red Roses</h3><p class="price">Rp 250.000</p></div></div>
+      <div class="card"><img src="/tulip.jpeg"><div class="card-body"><h3>Spring Tulip Mix</h3><p class="price">Rp 180.000</p></div></div>
+      <div class="card"><img src="/lily.jpeg"><div class="card-body"><h3>White Elegance Lily</h3><p class="price">Rp 300.000</p></div></div>
+      <div class="card"><img src="/sunflower.jpeg"><div class="card-body"><h3>Sunshine Sunflower</h3><p class="price">Rp 110.000</p></div></div>
+      <div class="card"><img src="/pastel.jpeg"><div class="card-body"><h3>Mixed Pastel Bouquet</h3><p class="price">Rp 450.000</p></div></div>
+    </div>
+  </section>
+
+  <section id="thisweek" style="background: rgba(255,255,255,0.3); border-radius: 50px;">
+    <h2 class="section-title">This Week's Selection</h2>
+    <div class="grid">
+      <div class="card" style="grid-column: span 1 / -1; max-width: 600px; margin: 0 auto;">
+        <img src="/violet.jpeg">
+        <div class="card-body">
+          <h3>Violet Dream Bundle</h3>
+          <p>Kombinasi Lavender dan Mawar Putih yang sedang promo minggu ini!</p>
+          <p class="price">Diskon 15% - Rp 340.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricelist">
+    <h2 class="section-title">Bouquet Pricelist</h2>
+    <table class="price-table">
+      <tr><th>Kategori Bouquet</th><th>Range Harga</th></tr>
+      <tr><td>Mini Single Tangkai</td><td>Rp 35.000 - Rp 45.000</td></tr>
+      <tr><td>Small Bouquet (3-5 Tangkai)</td><td>Rp 85.000 - Rp 150.000</td></tr>
+      <tr><td>Medium Bouquet (10 Tangkai)</td><td>Rp 200.000 - Rp 350.000</td></tr>
+      <tr><td>Large Luxury Bouquet</td><td>Rp 400.000 - Rp 500.000+</td></tr>
+    </table>
+  </section>
+
+  <section id="order">
+    <h2 class="section-title">Pemesanan</h2>
+    <form id="orderForm">
+      <div class="form-group"><label>Nama Lengkap</label><input type="text" name="nama" required></div>
+      <div class="form-group"><label>Nomor WhatsApp</label><input type="tel" name="wa" required></div>
+      <div class="form-group"><label>Pilih Bunga</label>
+        <select name="bunga">
+          <option>Signature Lavender</option>
+          <option>Premium Red Roses</option>
+          <option>Violet Dream Bundle</option>
+          <option>Custom Bouquet</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Jumlah</label><input type="number" name="jumlah" value="1" min="1"></div>
+      <div class="form-group"><label>Pesan Kartu Ucapan</label><textarea name="pesan" rows="4"></textarea></div>
+      <button type="submit" class="btn-submit" id="submitBtn">Kirim Pesanan Sekarang</button>
+    </form>
+  </section>
+
+  <footer style="padding: 40px; text-align: center; background: var(--deep-purple); color: white;">
+    <p>&copy; 2026 Lavendelle Floral Boutique. Dibuat dengan cinta dan wangi lavender.</p>
+  </footer>
+
+  <script>
+    function toggleNav() { document.getElementById('navbar').classList.toggle('active'); }
+
+    function scrollToId(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('navbar').classList.remove('active');
+      }
+    }
+
+    // Falling Petals
+    function createPetal() {
+      const container = document.getElementById('animation-container');
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.width = Math.random() * 15 + 10 + 'px';
+      petal.style.height = petal.style.width;
+      petal.style.animationDuration = Math.random() * 4 + 3 + 's';
+      container.appendChild(petal);
+      setTimeout(() => petal.remove(), 6000);
+    }
+    setInterval(createPetal, 400);
+
+    // Order Submission
+    document.getElementById('orderForm').onsubmit = function(e) {
+      e.preventDefault();
+      
+      // Validasi form
+      const nama = this.nama.value.trim();
+      const wa = this.wa.value.trim();
+      const bunga = this.bunga.value;
+      const jumlah = this.jumlah.value;
+      const pesan = this.pesan.value.trim();
+      
+      if (!nama || !wa || !bunga || !jumlah) {
+        alert('Harap isi semua field yang wajib diisi!');
+        return;
+      }
+      
+      // Validasi nomor WhatsApp (minimal 10 digit)
+      if (wa.length < 10) {
+        alert('Nomor WhatsApp harus minimal 10 digit!');
+        return;
+      }
+      
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = "Memproses..."; 
+      btn.disabled = true;
+      
+      // Simulasi pengiriman (dalam production, ini akan mengirim ke server)
+      setTimeout(() => {
+        // Tampilkan pesan sukses
+        alert(`Pesanan berhasil dikirim!\n\nDetail Pesanan:\nNama: ${nama}\nWhatsApp: ${wa}\nBunga: ${bunga}\nJumlah: ${jumlah}\nPesan: ${pesan || '-'}\n\nKami akan segera menghubungi Anda untuk konfirmasi.`);
+        
+        // Reset form
+        document.getElementById('orderForm').reset();
+        btn.innerHTML = "Kirim Pesanan Sekarang"; 
+        btn.disabled = false;
+      }, 1500);
+    };
+  </script>
+</body>
+</html>
